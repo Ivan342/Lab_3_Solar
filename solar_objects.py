@@ -75,8 +75,18 @@ class Planet:
     R = 5
     """Радиус планеты"""
 
-    color = "green"
+    color = GREEN
     """Цвет планеты"""
 
     image = None
     """Изображение планеты"""
+
+RED = (255, 0, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+GREEN = (0, 255, 0)
+MAGENTA = (255, 0, 255)
+CYAN = (0, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (150, 150, 150)
+COLORS = {"red" : RED, "blue" : BLUE, "yellow" : YELLOW, "green" : GREEN, "magenta" : MAGENTA, "cyan" : CYAN}

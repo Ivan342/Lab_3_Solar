@@ -61,6 +61,11 @@ def parse_planet_parameters(line, planet):
     **line** — строка с описание планеты.
     **planet** — объект планеты.
     """
+    line1 = line """для изменения этой строки"""
+    line1= line1[:line1.find(' '):]
+    planet.R = int(line1[:line1.find(' '):])
+
+
     pass  # FIXME: not done yet...
 
 
