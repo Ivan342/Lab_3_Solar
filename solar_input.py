@@ -1,7 +1,7 @@
 # coding: utf-8
 # license: GPLv3
 
-from solar_objects import Star, Planet
+from solar_objects import Star, Planet, color_f
 
 
 def read_space_objects_data_from_file(input_filename):
@@ -14,7 +14,7 @@ def read_space_objects_data_from_file(input_filename):
     """
 
     objects = []
-    with open(input_filename) as input_file:
+    with open('solar_system.txt') as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
@@ -23,9 +23,11 @@ def read_space_objects_data_from_file(input_filename):
                 star = Star()
                 parse_star_parameters(line, star)
                 objects.append(star)
+            if object_type == "planet":
+                planet = Planet()
+                parse_planet_parameters(line, planet)
             else:
                 print("Unknown space object")
-
     return objects
 
 
@@ -43,8 +45,16 @@ def parse_star_parameters(line, star):
     **line** — строка с описание звезды.
     **star** — объект звезды.
     """
+    param = line.split()
+    star.R = int(param[1])
+    star.color = [param[2]]
+    star.m = int(param[3])
+    star.x = int(param[4])
+    star.y = int(param[5])
+    star.Vx = int(param[6])
+    star.Vy = int(param[7])
 
-    pass  # FIXME: not done yet
+    pass
 
 def parse_planet_parameters(line, planet):
     """Считывает данные о планете из строки.
@@ -61,10 +71,16 @@ def parse_planet_parameters(line, planet):
     **line** — строка с описание планеты.
     **planet** — объект планеты.
     """
-    line1 = line """для изменения этой строки"""
-    line1= line1[:line1.find(' '):]
+    line1 = line
+    """для изменения этой строки"""
+    line1 = line1[:line1.find(' '):]
     planet.R = int(line1[:line1.find(' '):])
-
+    planet.color = color_f(line[2])
+    planet.m = int(line[3])
+    planet.x = int(line[4])
+    planet.y = int(line[5])
+    planet.Vx = int(line[6])
+    planet.Vy = int(line[7])
 
     pass  # FIXME: not done yet...
 
