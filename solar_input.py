@@ -12,7 +12,6 @@ def read_space_objects_data_from_file(input_filename):
 
     **input_filename** — имя входного файла
     """
-    global objects
     objects = []
 
     with open(input_filename) as input_file:
@@ -108,5 +107,3 @@ def write_space_objects_data_to_file(output_filename, space_objects):
 if __name__ == "__main__":
     print("This module is not for direct call!")
 
-read_space_objects_data_from_file("tests.txt")
-print(objects[0].color)
