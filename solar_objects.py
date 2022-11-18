@@ -28,7 +28,7 @@ class Star:
         self.R = 5
         """Радиус звезды"""
 
-        self.color = COLORS["red"]
+        self.color = color_f("red")
         """Цвет звезды"""
 
         self.image = None
@@ -84,4 +84,4 @@ def color_f(str):
     BLACK = (0, 0, 0)
     GRAY = (150, 150, 150)
     COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN, "magenta": MAGENTA, "cyan": CYAN}
-    return COLORS[str]
+    return COLORS
