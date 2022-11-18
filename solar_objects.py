@@ -68,7 +68,7 @@ class Planet:
         """Сила по оси **y**"""
         self.R = 5
         """Радиус планеты"""
-        self.color = color_f('RED')
+        self.color = color_f('red')
         """Цвет планеты"""
         self.image = None
         """Изображение планеты"""
@@ -83,5 +83,8 @@ def color_f(str):
     CYAN = (0, 255, 255)
     BLACK = (0, 0, 0)
     GRAY = (150, 150, 150)
-    COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN, "magenta": MAGENTA, "cyan": CYAN}
+    ORANGE = (255, 100, 10)
+    WHITE = (255, 255, 255)
+    COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN,
+              "magenta": MAGENTA, "cyan": CYAN, "orange": ORANGE, "white": WHITE}
     return COLORS[str]
