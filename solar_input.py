@@ -12,9 +12,10 @@ def read_space_objects_data_from_file(input_filename):
 
     **input_filename** — имя входного файла
     """
-
+    global objects
     objects = []
-    with open(input_filename) as input_file:
+
+    with open('solar_system.txt') as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
@@ -26,6 +27,7 @@ def read_space_objects_data_from_file(input_filename):
             if object_type == "planet":
                 planet = Planet()
                 parse_planet_parameters(line, planet)
+                objects.append(planet)
             else:
                 print("Unknown space object")
     return objects
@@ -46,13 +48,13 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
     param = line.split()
-    star.R = int(param[1])
-    star.color = [param[2]]
-    star.m = int(param[3])
-    star.x = int(param[4])
-    star.y = int(param[5])
-    star.Vx = int(param[6])
-    star.Vy = int(param[7])
+    star.R = float(param[1])
+    star.color = param[2]
+    star.m = float(param[3])
+    star.x = float(param[4])
+    star.y = float(param[5])
+    star.Vx = float(param[6])
+    star.Vy = float(param[7])
 
     pass
 
@@ -74,13 +76,13 @@ def parse_planet_parameters(line, planet):
     line1 = line
     """для изменения этой строки"""
     line1 = line1[:line1.find(' '):]
-    planet.R = int(line1[:line1.find(' '):])
+    planet.R = float(line1[:line1.find(' '):])
     planet.color = color_f(line[2])
-    planet.m = int(line[3])
-    planet.x = int(line[4])
-    planet.y = int(line[5])
-    planet.Vx = int(line[6])
-    planet.Vy = int(line[7])
+    planet.m = float(line[3])
+    planet.x = float(line[4])
+    planet.y = float(line[5])
+    planet.Vx = float(line[6])
+    planet.Vy = float(line[7])
 
     pass  # FIXME: not done yet...
 
@@ -98,10 +100,13 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
+            print(out_file, )
             # FIXME: should store real values
 
 # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
+
+read_space_objects_data_from_file("solar_system.txt")
+print(objects)
