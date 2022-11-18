@@ -84,4 +84,4 @@ def color_f(str):
     BLACK = (0, 0, 0)
     GRAY = (150, 150, 150)
     COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN, "magenta": MAGENTA, "cyan": CYAN}
-    return COLORS
+    return COLORS[str]
