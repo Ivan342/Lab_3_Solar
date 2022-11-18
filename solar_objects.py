@@ -73,6 +73,8 @@ class Planet:
         self.image = None
         """Изображение планеты"""
 
+def from_rgb(rgb):
+    return "#%02x%02x%02x" % rgb
 
 def color_f(str):
     RED = (255, 0, 0)
