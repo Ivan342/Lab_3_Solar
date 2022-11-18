@@ -89,4 +89,4 @@ def color_f(str):
     WHITE = (255, 255, 255)
     COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN,
               "magenta": MAGENTA, "cyan": CYAN, "orange": ORANGE, "white": WHITE}
-    return COLORS[str]
+    return from_rgb(COLORS[str])

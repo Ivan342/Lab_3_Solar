@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e21840-c74c-4a0e-9695-7ef68583d33a" name="Changes" comment="Начал править solar_model">
-      <change beforePath="$PROJECT_DIR$/solar_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/solar_main.py" afterDir="false" />
+    <list default="true" id="08e21840-c74c-4a0e-9695-7ef68583d33a" name="Changes" comment="Добавил функцию перевода в цвет">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/solar_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar_vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solar_vis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.Testing_do_not_push">
+  <component name="RunManager" selected="Python.solar_main">
     <configuration name="Testing_do_not_push" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lab_3_Solar" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,9 +122,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.solar_main" />
         <item itemvalue="Python.Testing_do_not_push" />
         <item itemvalue="Python.solar_objects" />
-        <item itemvalue="Python.solar_main" />
         <item itemvalue="Python.solar_vis" />
       </list>
     </recent_temporary>
@@ -174,7 +173,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668758639696</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Начал править solar_model">
+      <created>1668760478515</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760478515</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавил функцию перевода в цвет">
+      <created>1668760523917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760523917</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Добавил функцию перевода в цвет">
+      <created>1668760893446</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668760893446</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +211,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Исправил функцию scale_y и функцию create_planet_image в модуле solar_vis.py" />
     <MESSAGE value="Начал править solar_model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал править solar_model" />
+    <MESSAGE value="Добавил функцию перевода в цвет" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил функцию перевода в цвет" />
   </component>
 </project>
