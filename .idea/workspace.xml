@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08e21840-c74c-4a0e-9695-7ef68583d33a" name="Changes" comment="Добавил функцию перевода в цвет">
+    <list default="true" id="08e21840-c74c-4a0e-9695-7ef68583d33a" name="Changes" comment="Начало работать">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/solar_objects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/solar_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668760893446</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Начало работать">
+      <created>1668761387755</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668761387755</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +219,7 @@
     <MESSAGE value="Исправил функцию scale_y и функцию create_planet_image в модуле solar_vis.py" />
     <MESSAGE value="Начал править solar_model" />
     <MESSAGE value="Добавил функцию перевода в цвет" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил функцию перевода в цвет" />
+    <MESSAGE value="Начало работать" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начало работать" />
   </component>
 </project>
