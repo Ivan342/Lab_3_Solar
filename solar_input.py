@@ -15,7 +15,7 @@ def read_space_objects_data_from_file(input_filename):
     global objects
     objects = []
 
-    with open('solar_system.txt') as input_file:
+    with open(input_filename) as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
@@ -49,7 +49,7 @@ def parse_star_parameters(line, star):
     """
     param = line.split()
     star.R = float(param[1])
-    star.color = param[2]
+    star.color = color_f(param[2])
     star.m = float(param[3])
     star.x = float(param[4])
     star.y = float(param[5])
@@ -75,15 +75,15 @@ def parse_planet_parameters(line, planet):
     """
     line1 = line
     """для изменения этой строки"""
-    line1 = line1[:line1.find(' '):]
-    planet.R = float(line1[:line1.find(' '):])
-    planet.color = color_f(line[2])
-    planet.m = float(line[3])
-    planet.x = float(line[4])
-    planet.y = float(line[5])
-    planet.Vx = float(line[6])
-    planet.Vy = float(line[7])
+    param = line.split()
 
+    planet.R = float(param[1])
+    planet.color = color_f(param[2])
+    planet.m = float(param[3])
+    planet.x = float(param[4])
+    planet.y = float(param[5])
+    planet.Vx = float(param[6])
+    planet.Vy = float(param[7])
     pass  # FIXME: not done yet...
 
 
@@ -108,5 +108,5 @@ def write_space_objects_data_to_file(output_filename, space_objects):
 if __name__ == "__main__":
     print("This module is not for direct call!")
 
-read_space_objects_data_from_file("solar_system.txt")
-print(objects)
+read_space_objects_data_from_file("tests.txt")
+print(objects[0].color)
