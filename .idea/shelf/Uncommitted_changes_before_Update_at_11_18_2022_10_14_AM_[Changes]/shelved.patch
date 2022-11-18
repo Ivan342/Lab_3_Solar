@@ -1,0 +1,25 @@
+Index: solar_objects.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># coding: utf-8\r\n# license: GPLv3\r\n\r\n\r\nclass Star:\r\n    def __repr__(self):\r\n        self.m = 0\r\n        \"\"\"Масса звезды\"\"\"\r\n\r\n        self.x = 0\r\n        \"\"\"Координата по оси **x**\"\"\"\r\n\r\n        self.y = 0\r\n        \"\"\"Координата по оси **y**\"\"\"\r\n\r\n        self.Vx = 0\r\n        \"\"\"Скорость по оси **x**\"\"\"\r\n\r\n        self.Vy = 0\r\n        \"\"\"Скорость по оси **y**\"\"\"\r\n\r\n        self.Fx = 0\r\n        \"\"\"Сила по оси **x**\"\"\"\r\n\r\n        self.Fy = 0\r\n        \"\"\"Сила по оси **y**\"\"\"\r\n\r\n        self.R = 5\r\n        \"\"\"Радиус звезды\"\"\"\r\n\r\n        self.color = color_f(\"red\")\r\n        \"\"\"Цвет звезды\"\"\"\r\n\r\n        self.image = None\r\n        \"\"\"Изображение звезды\"\"\"\r\n\r\n    \"\"\"Тип данных, описывающий звезду.\r\n    Содержит массу, координаты, скорость звезды,\r\n    а также визуальный радиус звезды в пикселах и её цвет.\r\n    \"\"\"\r\n\r\n    type = \"star\"\r\n    \"\"\"Признак объекта звезды\"\"\"\r\n\r\n\r\nclass Planet:\r\n    \"\"\"Тип данных, описывающий планету.\r\n    Содержит массу, координаты, скорость планеты,\r\n    а также визуальный радиус планеты в пикселах и её цвет\r\n    \"\"\"\r\n    type = \"planet\"\r\n    \"\"\"Признак объекта планеты\"\"\"\r\n\r\n    def __init__(self):\r\n        self.m = 0\r\n        \"\"\"Масса планеты\"\"\"\r\n        self.x = 0\r\n        \"\"\"Координата по оси **x**\"\"\"\r\n        self.y = 0\r\n        \"\"\"Координата по оси **y**\"\"\"\r\n        self.Vx = 0\r\n        \"\"\"Скорость по оси **x**\"\"\"\r\n        self.Vy = 0\r\n        \"\"\"Скорость по оси **y**\"\"\"\r\n        self.Fx = 0\r\n        \"\"\"Сила по оси **x**\"\"\"\r\n        self.Fy = 0\r\n        \"\"\"Сила по оси **y**\"\"\"\r\n        self.R = 5\r\n        \"\"\"Радиус планеты\"\"\"\r\n        self.color = color_f('RED')\r\n        \"\"\"Цвет планеты\"\"\"\r\n        self.image = None\r\n        \"\"\"Изображение планеты\"\"\"\r\n\r\n\r\ndef color_f(str):\r\n    RED = (255, 0, 0)\r\n    BLUE = (0, 0, 255)\r\n    YELLOW = (255, 255, 0)\r\n    GREEN = (0, 255, 0)\r\n    MAGENTA = (255, 0, 255)\r\n    CYAN = (0, 255, 255)\r\n    BLACK = (0, 0, 0)\r\n    GRAY = (150, 150, 150)\r\n    COLORS = {\"red\": RED, \"blue\": BLUE, \"yellow\": YELLOW, \"green\": GREEN, \"magenta\": MAGENTA, \"cyan\": CYAN}\r\n    return COLORS\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/solar_objects.py b/solar_objects.py
+--- a/solar_objects.py	(revision c638394382d2d5e499612458c29e69aacb5cfcde)
++++ b/solar_objects.py	(date 1668755571360)
+@@ -68,7 +68,7 @@
+         """Сила по оси **y**"""
+         self.R = 5
+         """Радиус планеты"""
+-        self.color = color_f('RED')
++        self.color = color_f('red')
+         """Цвет планеты"""
+         self.image = None
+         """Изображение планеты"""
+@@ -84,4 +84,4 @@
+     BLACK = (0, 0, 0)
+     GRAY = (150, 150, 150)
+     COLORS = {"red": RED, "blue": BLUE, "yellow": YELLOW, "green": GREEN, "magenta": MAGENTA, "cyan": CYAN}
+-    return COLORS
++    return COLORS[str]
