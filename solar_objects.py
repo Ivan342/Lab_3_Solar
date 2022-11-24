@@ -3,6 +3,11 @@
 
 
 class Star:
+    def __init__(self):
+
+        self.space_type = "Star"
+
+
     def __repr__(self):
         self.m = 0
         """Масса звезды"""
@@ -33,6 +38,7 @@ class Star:
 
         self.image = None
         """Изображение звезды"""
+
 
     """Тип данных, описывающий звезду.
     Содержит массу, координаты, скорость звезды,
@@ -73,8 +79,30 @@ class Planet:
         self.image = None
         """Изображение планеты"""
 
+        self.space_type = 'Planet'
+
 def from_rgb(rgb):
     return "#%02x%02x%02x" % rgb
+
+def from_hex(str):
+    a1 = int(str[1:3:], 16)
+    a2 = int(str[3:5:], 16)
+    a3 = int(str[5::], 16)
+
+    RED = (255, 0, 0)
+    BLUE = (0, 0, 255)
+    YELLOW = (255, 255, 0)
+    GREEN = (0, 255, 0)
+    MAGENTA = (255, 0, 255)
+    CYAN = (0, 255, 255)
+    BLACK = (0, 0, 0)
+    GRAY = (150, 150, 150)
+    ORANGE = (255, 100, 10)
+    WHITE = (255, 255, 255)
+    COLORS = {RED : "red", BLUE: "blue", YELLOW : "yellow", GREEN : "green",
+              MAGENTA : "magenta", CYAN : "cyan", ORANGE : "orange", WHITE : "white"}
+    return COLORS[(a1, a2, a3)]
+
 
 def color_f(str):
     RED = (255, 0, 0)
